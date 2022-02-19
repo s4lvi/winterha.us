@@ -35,6 +35,14 @@ hr {
   color: #E1EFE6;
 }
 
+a {
+  color:#EFCB68;
+}
+
+a:visited {
+  color:#EFCB68;
+}
+
 .inner-page {
   padding: 2vw;
 }
@@ -57,6 +65,18 @@ hr {
 
 .content-right {
   min-width: 72vw;
+}
+
+.title-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.title-list:hover {
+  color:#000411;
+  background-color: #EFCB68;
 }
 
 .footer {
