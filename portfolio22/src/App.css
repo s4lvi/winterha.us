@@ -102,10 +102,15 @@ a:visited {
 .footer {
   position: fixed;
   bottom: 0;
-  width: 100vw;
-  padding-left: 2vw;
+  width: 96vw;
   color: #160C28;
   background-color: #EFCB68;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
