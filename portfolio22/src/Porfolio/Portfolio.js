@@ -4,9 +4,6 @@ import ProjectInfo from '../ProjectInfo/ProjectInfo';
 import Footer from "../Footer/Footer";
 
 class Portfolio extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
