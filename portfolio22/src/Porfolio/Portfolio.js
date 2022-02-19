@@ -31,7 +31,7 @@ class Portfolio extends React.Component {
                 });
 
                 var projects = {};
-                data.map(d => {projects[d.title] = d});
+                data.forEach(d => {projects[d.title] = d});
 
                 this.setState({projects:projects, projectTitles:titles})
             }
