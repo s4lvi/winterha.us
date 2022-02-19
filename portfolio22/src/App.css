@@ -59,6 +59,14 @@ hr {
   min-width: 72vw;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding-left: 2vw;
+  background-color: #000411;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
