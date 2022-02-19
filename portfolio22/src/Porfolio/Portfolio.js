@@ -48,7 +48,7 @@ class Portfolio extends React.Component {
         return (
             <div className="page">
               <div className="inner-page">
-                <div className="title">salvi / codeweekend portfolio</div>
+                <div className="title">winterha.us / salvi portfolio</div>
                 <hr />
                 <div className="content">
                   <div className="content-left">

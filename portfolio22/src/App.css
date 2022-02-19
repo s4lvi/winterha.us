@@ -99,6 +99,11 @@ a:visited {
   border: 1px solid #E1EFE6;
 }
 
+.tag-list li:hover {
+  color: #EFCB68;
+  border: 1px solid #EFCB68;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
