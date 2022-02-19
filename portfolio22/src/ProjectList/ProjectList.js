@@ -24,6 +24,7 @@ class ProjectList extends React.Component {
                 return <li onClick={() => this.select(t)} key={t}>{t}</li>
             })
         }
+        
         return (
             <React.Fragment>
                 {titles.length > 0 &&

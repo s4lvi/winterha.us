@@ -74,7 +74,7 @@ a:visited {
   width: 100%;
 }
 
-.title-list:hover {
+.title-list li:hover {
   color:#000411;
   background-color: #EFCB68;
 }
