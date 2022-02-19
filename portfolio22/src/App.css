@@ -60,11 +60,13 @@ a:visited {
   border-right: 1px solid #E1EFE6;
   min-height: 84vh;
   min-width: 20vw;
+  width: 20vw;
   margin-right: 2vw;
 }
 
 .content-right {
   min-width: 72vw;
+  width: 72vw;
 }
 
 .title-list {

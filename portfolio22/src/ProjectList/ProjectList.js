@@ -21,7 +21,7 @@ class ProjectList extends React.Component {
         var titles = [];
         if (this.state.titles && this.state.titles.length > 0) {
             titles = this.state.titles.map(t => {
-                return <li onClick={() => this.select(t)} key={t}>{"> "}{t}</li>
+                return <li onMouseEnter={() => this.select(t)} key={t}>{"> "}{t}</li>
             })
         }
 
