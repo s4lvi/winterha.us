@@ -64,7 +64,8 @@ hr {
   bottom: 0;
   width: 100vw;
   padding-left: 2vw;
-  background-color: #000411;
+  color: #160C28;
+  background-color: #EFCB68;
 }
 
 @media (prefers-reduced-motion: no-preference) {
