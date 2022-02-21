@@ -24,7 +24,7 @@ class ProjectInfo extends React.Component {
             <React.Fragment>
                 { this.state.project && this.state.project.tags && 
                     <div className="project-info">
-                        <a href={this.state.project.link}>{this.state.project.title}</a><br />
+                        <a href={this.state.project.link}>{this.state.project.title}</a><i>{" - "}{this.state.project.year}</i><br />
                         {this.state.project.description}<br /><br />
                         {"tags: "}<br /><br />
                         <ul className="tag-list">{tags}</ul>
