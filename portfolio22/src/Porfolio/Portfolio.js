@@ -4,13 +4,12 @@ import Footer from "../Footer/Footer"
 import React, {useState, useEffect} from 'react'
 
 const Portfolio = () => {
-    const [projectTitles, setProjectTitles] = useState([])
     const [projects, setProjects] = useState({})
     const [currentProject, setCurrentProject] = useState({})
 
     useEffect(() => {
         fetchProjects()
-    })
+    }, [])
 
     const fetchProjects = () => {
         let url = "https://z2571uhn2d.execute-api.us-east-2.amazonaws.com/prod/projects";
@@ -25,7 +24,6 @@ const Portfolio = () => {
                 var projects = {};
                 data.forEach(d => {projects[d.title] = d});
                 setProjects(projects)
-                setProjectTitles(titles)
             }
         })
     }
@@ -43,7 +41,7 @@ const Portfolio = () => {
             <hr />
             <div className="content">
                 <div className="content-left">
-                <ProjectList titles={projectTitles} selectProject={selectProject} />
+                <ProjectList projects={projects} selectProject={selectProject} />
                 </div>
                 <div className="content-right">
                 <ProjectInfo project={currentProject} />

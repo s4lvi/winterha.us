@@ -1,22 +1,33 @@
 import React, {useState, useEffect} from "react"
 
 const ProjectList = (props) => {
-    const [titles, setTitles] = useState([])
+    const [projects, setProjects] = useState([])
+    const [tag, setTag] = useState()
+    const [tagList, setTagList] = useState([])
 
     const select = (title) => {
-        props.selectProject(title);
+        props.selectProject(title)
+    }
+    
+    const selectTag = (tag) => {
+        setTag(tag)
     }
 
-    if (props.titles && props.titles.length > 0) {
-        setTitles(props.titles.map(t => {
-            return <li onMouseEnter={() => this.select(t)} key={t}>{"> "}{t}</li>
-        }))
-    }
+    useEffect(() => {
+        if (props.projects && Object.keys(props.projects).length > 0) {
+            setProjects(Object.keys(props.projects).map(p => {
+                return <li onMouseEnter={() => select(props.projects[p].title)} key={props.projects[p].title}>{"> "}{props.projects[p].title}</li>
+            }))
+        }
+    }, [props.projects])
 
     return (
         <React.Fragment>
-            {titles.length > 0 &&
-                <ul className="title-list">{titles}</ul>
+            {projects.length > 0 &&
+                <ul className="title-list">{projects}</ul>
+            }
+            {tagList.length > 0 && 
+                <ul className="title-list">{tagList}</ul>
             }
         </React.Fragment>
     )

@@ -1,14 +1,16 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 
 const ProjectInfo = (props) => {
 
     const [tags, setTags] = useState([])
 
-    if (props.project && props.project.tags && props.project.tags.length > 0) {
-        setTags(props.project.tags.map(t => {
-            return <li key={t}>{t}</li>
-        }))
-    }
+    useEffect(() => {
+        if (props.project && props.project.tags && props.project.tags.length > 0) {
+            setTags(props.project.tags.map(t => {
+                return <li key={t}>{t}</li>
+            }))
+        }
+    }, [props.project])
 
     return (
         <React.Fragment>
