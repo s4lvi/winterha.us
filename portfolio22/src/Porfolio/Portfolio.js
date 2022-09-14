@@ -1,10 +1,12 @@
 import ProjectList from '../ProjectList/ProjectList'
 import ProjectInfo from '../ProjectInfo/ProjectInfo'
+import Tags from '../Tags/Tags'
 import Footer from "../Footer/Footer"
 import React, {useState, useEffect} from 'react'
 
 const Portfolio = () => {
     const [projects, setProjects] = useState({})
+    const [currentTag, setCurrentTag] = useState()
     const [currentProject, setCurrentProject] = useState({})
 
     useEffect(() => {
@@ -34,6 +36,10 @@ const Portfolio = () => {
         }
     }
 
+    const selectTag = (tag) => {
+        setCurrentTag(tag)
+    }
+
     return (
         <div className="page">
             <div className="inner-page">
@@ -41,7 +47,9 @@ const Portfolio = () => {
             <hr />
             <div className="content">
                 <div className="content-left">
-                <ProjectList projects={projects} selectProject={selectProject} />
+                <ProjectList projects={projects} selectProject={selectProject} tag={currentTag} />
+                <hr />
+                <Tags projects={projects} selectTag={selectTag} />
                 </div>
                 <div className="content-right">
                 <ProjectInfo project={currentProject} />
