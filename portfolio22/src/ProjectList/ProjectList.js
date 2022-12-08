@@ -6,7 +6,7 @@ const ProjectList = (props) => {
         props.selectProject(title)
     }
 
-    const updateProjects = (tag=null) => {
+    const updateProjects = (tag="") => {
         if (props.projects && Object.keys(props.projects).length > 0) {
             setProjects(Object.keys(props.projects).map(p => {
                 var highlight = props.projects[p].tags.includes(tag) ? 'tag-highlight' : ''
@@ -24,7 +24,7 @@ const ProjectList = (props) => {
 
         updateProjects(props.tag)
 
-    }, [props.tag])
+    }, [props.projects, props.tag])
 
     return (
         <React.Fragment>
